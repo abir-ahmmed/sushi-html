@@ -38,34 +38,7 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', scrollHeader)
 
-/*=============== TESTIMONIAL SWIPER ===============*/
-let testimonialSwiper = new Swiper(".testimonial-swiper", {
-    spaceBetween: 30,
-    loop: 'true',
 
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-
-/*=============== NEW SWIPER ===============*/
-let newSwiper = new Swiper(".new-swiper", {
-    spaceBetween: 24,
-    loop: 'true',
-
-    breakpoints: {
-        576: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-    },
-});
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
@@ -147,3 +120,20 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+/*==============SCROLL REVEAL ANIMATION=============*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: '2500',
+    delay: 400,
+    //reset: true // Animations repeat
+})
+
+sr.reveal(`.home__img, .newsletter__container, .footer__logo,
+footer__description, .footer__content, .footer__info`)
+sr.reveal('.home__data', {origin:'bottom'})
+sr.reveal('.about__data, .recently__data', {origin:'left'})
+sr.reveal('.about__img, .recently__img', {origin:'right'})
+sr.reveal('.popular__card', {interval: 100})
