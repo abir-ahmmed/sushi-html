@@ -315,6 +315,10 @@ body.dark-theme{
   padding-top: 2rem;
 }
 
+img.home__img{
+  margin: 0 auto;
+}
+
 .home__img{
   width: 300px;
   justify-content: center;
@@ -370,7 +374,7 @@ body.dark-theme{
 .button{
   display: inline-flex;
   align-items: center;
-  column-gap: 5rem;
+  column-gap: .5rem;
   background-color: var(--first-color);
   padding: 1rem 1.5rem;
   border-radius: 4rem;
@@ -429,10 +433,10 @@ body.dark-theme{
 
 /*=============== POPULAR ===============*/
 .popular__container{
-  padding-top: 4rem;
+  padding-top: 2rem;
   grid-template-columns: 250px;
   justify-content: center;
-  row-gap: 5.5rem;
+  row-gap: 2.5rem;
 }
 .popular__card{
   position: relative;
@@ -541,7 +545,10 @@ body.dark-theme{
   bottom: 12rem;
   transform: rotate(-30deg);
 }
-
+p.recently__description{
+  padding-top: 36px;
+  padding-bottom: 28px;
+}
 
 /*=============== NEWSLETTER ===============*/
 .newsletter__container{
@@ -970,7 +977,7 @@ transition: color .3s;
   .popular__container{
     grid-template-columns: repeat(3, 262px);
     column-gap: 3.5rem;
-    padding-block: 6rem 4rem;
+    padding-block: 3rem 2rem;
   }
 
   .popular__card{
